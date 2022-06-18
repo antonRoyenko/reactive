@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from '@chakra-ui/react'
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Atom, Light, Stars } from './components'
+import GlobalStyles from './styles/GlobalStyles'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <ChakraProvider>
+            <GlobalStyles />
+            <div
+                style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    overflow: 'hidden auto',
+                    top: 0,
+                    left: 0,
+                    background: '#202025',
+                }}
+            >
+                <Canvas camera={{ position: [0, 0, 1] }}>
+                    <Stars />
+                    <Light />
+
+                    <Suspense fallback={null}>
+                        <Atom />
+                    </Suspense>
+                </Canvas>
+            </div>
+        </ChakraProvider>
+    )
 }
-
-export default App;
