@@ -35,10 +35,17 @@ export function styledIf(condition) {
 }
 
 export const fonts = {
-    basic: "EB Garamond', serif",
+    title: "'Space Age', sans-serif",
+    ultraLight: "'Sofia Pro Ultra Light', sans-serif",
+    light: "'Sofia Pro Light', sans-serif",
+    regular: "'Sofia Pro Regular', sans-serif",
+    medium: "'Sofia Pro Medium', sans-serif",
+    semiBold: "'Sofia Pro Semi Bold', sans-serif",
+    bold: "'Sofia Pro Bold', sans-serif",
 }
 
 export const fontWeights = {
+    ultraLight: 200,
     light: 300,
     regular: 400,
     medium: 500,

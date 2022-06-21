@@ -35,4 +35,18 @@ export default createGlobalStyle`
     button:focus span {
         transform: translate(0,0);
     }
+    
+    h1 {
+    	font-family: ${fonts.title};
+    	color: white;
+    	font-size: 5rem !important;
+    	white-space: nowrap
+    }
+    
+    h2 {
+    	font-family: ${fonts.title};
+    	color: white;
+    	font-size: 2rem !important;
+    	white-space: nowrap
+    }
 `

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Sofia Pro Ultra Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url(./Sofia Pro Ultra Light.otf) format('otf');
+}
+@font-face {
+  font-family: 'Sofia Pro Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(./Sofia Pro Light.otf) format('otf');
+}
+@font-face {
+  font-family: 'Sofia Pro Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Sofia Pro Regular.otf) format('otf');
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: 'Space Age';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Space Age.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Pro Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(./Sofia Pro Medium.otf) format('otf');
+}
+@font-face {
+  font-family: 'Sofia Pro Semi Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: url(./Sofia Pro Semi Bold.otf) format('otf');
+}
+@font-face {
+  font-family: 'Sofia Pro Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./Sofia Pro Bold.otf) format('otf');
+}
