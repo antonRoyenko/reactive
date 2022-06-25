@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
+import { Link } from 'react-router-dom'
 import {
     Atom,
     Light,
@@ -9,15 +10,19 @@ import {
 } from '../../components'
 import { Arrow } from '../../components/Icon'
 import { ArrowBottom, ArrowLeft, ArrowRight } from './styled'
+import Loader from '../../components/Loader'
 
 function MainScreen() {
     return (
-        <div>
+        <>
+            <Loader />
             <MainScreenWrapper>
                 <MainText />
                 <ArrowLeft>
-                    <span>About</span>
-                    <Arrow />
+                    <Link to="/about">
+                        <span>About</span>
+                        <Arrow />
+                    </Link>
                 </ArrowLeft>
                 <ArrowRight>
                     <span>Why</span>
@@ -27,16 +32,16 @@ function MainScreen() {
                     Contact
                     <Arrow />
                 </ArrowBottom>
-                <Canvas camera={{ position: [0, 0, 1] }}>
-                    <Stars />
-                    <Light />
 
-                    <Suspense fallback={null}>
+                <Suspense fallback={null}>
+                    <Canvas camera={{ position: [0, 0, 1] }}>
+                        <Stars />
+                        <Light />
                         <Atom />
-                    </Suspense>
-                </Canvas>
+                    </Canvas>
+                </Suspense>
             </MainScreenWrapper>
-        </div>
+        </>
     )
 }
 

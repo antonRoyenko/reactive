@@ -6,6 +6,7 @@ const Arrow = styled(ArrowMenu)`
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 `
 
 export const ArrowLeft = styled(Arrow)`
@@ -15,7 +16,7 @@ export const ArrowLeft = styled(Arrow)`
     & > div {
         position: absolute;
         bottom: 0;
-        left: 7px;
+        left: -2px;
         transform: translate(-50%, -50%) rotate(180deg);
     }
 
