@@ -18,12 +18,12 @@ function MainScreen() {
             <Loader />
             <MainScreenWrapper>
                 <MainText />
-                <ArrowLeft>
-                    <Link to="/about">
+                <Link to="/about">
+                    <ArrowLeft>
                         <span>About</span>
                         <Arrow />
-                    </Link>
-                </ArrowLeft>
+                    </ArrowLeft>
+                </Link>
                 <ArrowRight>
                     <span>Why</span>
                     <Arrow />

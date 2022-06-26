@@ -14,7 +14,7 @@ export default createGlobalStyle`
     body {
         font-weight: ${fontWeights.regular};
         font-size: 16px;
-        font-family: ${fonts.basic};
+        font-family: ${fonts.medium};
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         -webkit-tap-highlight-color: transparent;
@@ -48,5 +48,9 @@ export default createGlobalStyle`
     	color: white;
     	font-size: 2rem !important;
     	white-space: nowrap
+    }
+    
+    a {
+    	font-family: ${fonts.medium};
     }
 `
