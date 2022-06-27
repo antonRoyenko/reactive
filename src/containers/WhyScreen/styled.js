@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { fonts } from '../../styles/mixins'
+import { ArrowLeft as DefaultArrowLeft } from '../MainScreen/styled'
 
 export const Info = styled.div`
     display: flex;
@@ -44,4 +45,12 @@ export const SubTitle = styled.h3`
 
 export const Text = styled.p`
     font-family: ${fonts.light};
+`
+
+export const ArrowLeft = styled(DefaultArrowLeft)`
+    left: 1%;
+
+    & div {
+        left: -7px;
+    }
 `

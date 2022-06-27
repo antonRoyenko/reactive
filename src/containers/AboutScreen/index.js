@@ -1,11 +1,11 @@
 import { Canvas } from '@react-three/fiber'
 import { Link } from 'react-router-dom'
 import { Light, MainScreenWrapper, Stars } from '../../components'
-import { ArrowRight } from '../MainScreen/styled'
+import { ArrowLeft } from '../MainScreen/styled'
 import { Arrow } from '../../components/Icon'
 import Loader from '../../components/Loader'
 import Logo from '../../components/Logo'
-import { Card, Img, Text, Icons } from './styled'
+import { Card, Img, Text, Icons, ArrowRight } from './styled'
 
 function AboutScreen() {
     return (
@@ -18,6 +18,12 @@ function AboutScreen() {
                         <span>Main</span>
                         <Arrow />
                     </ArrowRight>
+                </Link>
+                <Link to="/why">
+                    <ArrowLeft>
+                        <span>Why me?</span>
+                        <Arrow />
+                    </ArrowLeft>
                 </Link>
                 <Card>
                     <Img src="/photo.png" alt="" />
