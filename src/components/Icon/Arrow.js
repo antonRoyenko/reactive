@@ -1,6 +1,6 @@
 import { ArrowWrapper } from './styled'
 
-function Arrow({ color = '#fff', direction = 'left' }) {
+function Arrow({ color = '#fff', direction = 'left', bigger, ...props }) {
     let rotate = 180
     if (direction === 'right') {
         rotate = 0
@@ -9,12 +9,12 @@ function Arrow({ color = '#fff', direction = 'left' }) {
     }
 
     return (
-        <ArrowWrapper transform={rotate}>
+        <ArrowWrapper transform={rotate} {...props}>
             <svg
                 fill="currentColor"
                 viewBox="0 0 14 11"
-                width="14"
-                height="11"
+                width={bigger ? '21' : '14'}
+                height={bigger ? '16.5' : '11'}
                 color={color}
             >
                 <path

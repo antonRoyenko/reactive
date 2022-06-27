@@ -2,10 +2,12 @@ import { useRef } from 'react'
 import { MathUtils } from 'three'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 function Atom() {
     const ref = useRef()
     const { nodes } = useGLTF('/atom2.glb')
+    const matches = useMediaQuery('(max-width: 768px)')
 
     useFrame(({ clock, camera }) => {
         const t = clock.getElapsedTime()
@@ -25,7 +27,11 @@ function Atom() {
     })
 
     return (
-        <group scale={0.1} position={[0, 0, 0]} rotation={[-1.1, 0.55, -2]}>
+        <group
+            scale={matches ? 0.05 : 0.1}
+            position={[0, 0, 0]}
+            rotation={[-1.1, 0.55, -2]}
+        >
             <group ref={ref}>
                 <mesh
                     geometry={nodes.Circle008_1.geometry}

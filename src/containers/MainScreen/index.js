@@ -1,45 +1,24 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
-import { Link } from 'react-router-dom'
-import {
-    Atom,
-    Light,
-    MainScreenWrapper,
-    MainText,
-    Stars,
-} from '../../components'
-import { Arrow } from '../../components/Icon'
-import { ArrowLeft, ArrowRight } from './styled'
-import Loader from '../../components/Loader'
+import { Atom, Light, MainText, Stars, ScreenWrapper } from '../../components'
 
 function MainScreen() {
     return (
-        <>
-            <Loader />
-            <MainScreenWrapper>
-                <MainText />
-                <Link to="/about">
-                    <ArrowLeft>
-                        <span>About me</span>
-                        <Arrow />
-                    </ArrowLeft>
-                </Link>
-                <Link to="/why">
-                    <ArrowRight>
-                        <span>Why me?</span>
-                        <Arrow />
-                    </ArrowRight>
-                </Link>
-
-                <Suspense fallback={null}>
-                    <Canvas camera={{ position: [0, 0, 1] }}>
-                        <Stars />
-                        <Light />
-                        <Atom />
-                    </Canvas>
-                </Suspense>
-            </MainScreenWrapper>
-        </>
+        <ScreenWrapper
+            linkLeft="/about"
+            linkRight="/why"
+            arrowLeftText="About me"
+            arrowRightText="Why me?"
+        >
+            <MainText />
+            <Suspense fallback={null}>
+                <Canvas camera={{ position: [0, 0, 1] }}>
+                    <Stars />
+                    <Light />
+                    <Atom />
+                </Canvas>
+            </Suspense>
+        </ScreenWrapper>
     )
 }
 

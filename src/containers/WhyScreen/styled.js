@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { fonts } from '../../styles/mixins'
-import { ArrowLeft as DefaultArrowLeft } from '../MainScreen/styled'
+import { fonts, media } from '../../styles/mixins'
 
 export const Info = styled.div`
     display: flex;
@@ -8,10 +7,14 @@ export const Info = styled.div`
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+
+    ${media.XS`
+        width: 80%;
+    `}
 `
 
 export const List = styled.ul`
@@ -27,16 +30,11 @@ export const List = styled.ul`
             margin-right: 20px;
         }
     }
-`
 
-export const Icons = styled.div`
-    display: flex;
-    margin-top: 20px;
-
-    img {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+    ${media.XS`
+        width: 100%;
+        padding: 0;
+    `}
 `
 
 export const SubTitle = styled.h3`
@@ -45,12 +43,4 @@ export const SubTitle = styled.h3`
 
 export const Text = styled.p`
     font-family: ${fonts.light};
-`
-
-export const ArrowLeft = styled(DefaultArrowLeft)`
-    left: 1%;
-
-    & div {
-        left: -7px;
-    }
 `

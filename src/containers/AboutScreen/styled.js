@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { fonts } from '../../styles/mixins'
-import { ArrowRight as DefaultArrowRight } from '../MainScreen/styled'
+import { fonts, media } from '../../styles/mixins'
 
 export const Card = styled.div`
     display: flex;
@@ -18,6 +17,11 @@ export const Img = styled.img`
     width: 256px;
     height: 256px;
     border-radius: 50%;
+
+    ${media.XS`
+        width: 180px;
+    	height: 180px;
+    `}
 `
 
 export const Text = styled.span`
@@ -45,13 +49,5 @@ export const Icons = styled.div`
     a {
         margin-left: 15px;
         margin-right: 15px;
-    }
-`
-
-export const ArrowRight = styled(DefaultArrowRight)`
-    right: 1%;
-
-    & div {
-        right: -18px;
     }
 `
