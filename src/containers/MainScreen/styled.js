@@ -11,12 +11,12 @@ const Arrow = styled(ArrowMenu)`
 
 export const ArrowLeft = styled(Arrow)`
     top: 50%;
-    left: 1%;
+    left: 0;
 
     & > div {
         position: absolute;
         bottom: 0;
-        left: -2px;
+        left: 10px;
         transform: translate(-50%, -50%) rotate(180deg);
     }
 
@@ -27,12 +27,12 @@ export const ArrowLeft = styled(Arrow)`
 
 export const ArrowRight = styled(Arrow)`
     top: 50%;
-    right: 1%;
+    right: 0;
 
     & > div {
         position: absolute;
         bottom: 0;
-        right: -16px;
+        right: -5px;
         transform: translate(-50%, -50%) rotate(0deg);
     }
 

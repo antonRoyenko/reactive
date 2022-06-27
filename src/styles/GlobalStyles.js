@@ -44,7 +44,7 @@ export default createGlobalStyle`
     }
     
     h2 {
-    	font-family: ${fonts.title};
+    	font-family: ${fonts.bold};
     	color: white;
     	font-size: 2rem !important;
     	white-space: nowrap

@@ -9,7 +9,7 @@ import {
     Stars,
 } from '../../components'
 import { Arrow } from '../../components/Icon'
-import { ArrowBottom, ArrowLeft, ArrowRight } from './styled'
+import { ArrowLeft, ArrowRight } from './styled'
 import Loader from '../../components/Loader'
 
 function MainScreen() {
@@ -20,18 +20,16 @@ function MainScreen() {
                 <MainText />
                 <Link to="/about">
                     <ArrowLeft>
-                        <span>About</span>
+                        <span>About me</span>
                         <Arrow />
                     </ArrowLeft>
                 </Link>
-                <ArrowRight>
-                    <span>Why</span>
-                    <Arrow />
-                </ArrowRight>
-                <ArrowBottom>
-                    Contact
-                    <Arrow />
-                </ArrowBottom>
+                <Link to="/why">
+                    <ArrowRight>
+                        <span>Why me?</span>
+                        <Arrow />
+                    </ArrowRight>
+                </Link>
 
                 <Suspense fallback={null}>
                     <Canvas camera={{ position: [0, 0, 1] }}>

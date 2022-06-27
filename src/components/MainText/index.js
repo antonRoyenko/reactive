@@ -1,10 +1,10 @@
-import { Wrapper } from './styled'
+import { Wrapper, H2 } from './styled'
 
 function MainText() {
     return (
         <Wrapper>
             <h1>Reactive station</h1>
-            <h2>Stake and enjoy with professional validator</h2>
+            <H2>Stake and enjoy with professional validator</H2>
         </Wrapper>
     )
 }

@@ -41,7 +41,7 @@ export const Icons = styled.div`
     display: flex;
     margin-top: 20px;
 
-    img {
+    a {
         margin-left: 15px;
         margin-right: 15px;
     }
