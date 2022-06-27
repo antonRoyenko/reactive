@@ -29,22 +29,39 @@ function Atom() {
             <group ref={ref}>
                 <mesh
                     geometry={nodes.Circle008_1.geometry}
-                    material={nodes.Circle008_1.material}
                     castShadow
                     receiveShadow
-                />
+                >
+                    <meshStandardMaterial
+                        color="#3853A3"
+                        emissive="#000000"
+                        flatShading
+                    />
+                </mesh>
                 <mesh
                     geometry={nodes.Circle008_2.geometry}
-                    material={nodes.Circle008_2.material}
                     castShadow
                     receiveShadow
-                />
+                >
+                    <meshStandardMaterial
+                        color="#ffffff"
+                        emissive="#000000"
+                        flatShading
+                        transparent
+                        opacity={0.1}
+                    />
+                </mesh>
                 <mesh
                     geometry={nodes.Circle008_3.geometry}
-                    material={nodes.Circle008_3.material}
                     castShadow
                     receiveShadow
-                />
+                >
+                    <meshStandardMaterial
+                        color="#707070"
+                        emissive="#000000"
+                        flatShading
+                    />
+                </mesh>
             </group>
         </group>
     )
