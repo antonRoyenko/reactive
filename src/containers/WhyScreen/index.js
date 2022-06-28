@@ -2,18 +2,21 @@ import { Canvas } from '@react-three/fiber'
 import { Light, Stars, ScreenWrapper } from '../../components'
 import { Info, List, SubTitle, Text } from './styled'
 import Logo from '../../components/Logo'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 function AboutScreen() {
+    const matches = useMediaQuery('(max-width: 768px)')
+
     return (
         <ScreenWrapper
             arrowLeftText="Main page"
             arrowRightText="About me"
-            linkRight="/"
-            linkLeft="/about"
+            linkRight="/about"
+            linkLeft="/"
         >
             <Logo />
             <Info>
-                <h2>Why me?</h2>
+                {!matches && <h2>Why me?</h2>}
                 <List>
                     <li>
                         <img src="/secure.svg" alt="" />

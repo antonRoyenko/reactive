@@ -34,6 +34,11 @@ export const List = styled.ul`
     ${media.XS`
         width: 100%;
         padding: 0;
+        
+        li {
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
     `}
 `
 
